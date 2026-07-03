@@ -1,0 +1,126 @@
+/* ── Analyze Page ──────────────────────────── */
+.analyze-page {
+  padding: var(--space-10) var(--space-6);
+}
+
+.analyze-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.analyze-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Score card */
+.analyze-score-card {
+  padding: var(--space-8);
+  border-left: 4px solid var(--color-accent);
+}
+
+.analyze-score-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+
+/* Breakdown */
+.score-breakdown {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-5);
+}
+
+.score-breakdown h4 {
+  margin-bottom: var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-tertiary);
+}
+
+.breakdown-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration) var(--ease);
+}
+
+.breakdown-row:hover {
+  background-color: var(--color-surface);
+}
+
+.breakdown-row span:last-child {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+}
+
+.breakdown-total {
+  border-top: 2px solid var(--color-border-dark);
+  padding-top: var(--space-3);
+  margin-top: var(--space-2);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  font-size: var(--text-base);
+}
+
+.breakdown-total span:last-child {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+}
+
+/* Partial matches */
+.partial-match-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration) var(--ease);
+}
+
+.partial-match-row:hover {
+  background-color: var(--color-surface);
+}
+
+/* AI summary */
+.ai-summary-text {
+  font-size: var(--text-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-secondary);
+  padding: var(--space-4);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-accent);
+}
+
+.ai-summary-text p {
+  margin-bottom: var(--space-3);
+}
+
+.ai-summary-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .analyze-layout {
+    grid-template-columns: 1fr;
+  }
+}

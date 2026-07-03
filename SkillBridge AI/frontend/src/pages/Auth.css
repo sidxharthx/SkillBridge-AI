@@ -1,0 +1,116 @@
+/* ── Auth Pages ────────────────────────────── */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  padding: var(--space-6);
+  position: relative;
+}
+
+/* Subtle grid pattern background */
+.auth-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--color-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  z-index: 1;
+}
+
+/* Top accent line */
+.auth-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--space-8);
+  right: var(--space-8);
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+}
+
+.auth-header {
+  margin-bottom: var(--space-8);
+  text-align: center;
+}
+
+.auth-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--weight-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-xl);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.auth-header h1 {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-2xl);
+}
+
+.auth-header p {
+  font-size: var(--text-sm);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.auth-form .form-input {
+  background-color: var(--color-bg);
+  border-color: var(--color-border-dark);
+}
+
+.auth-form .form-input:focus {
+  border-color: var(--color-accent);
+  background-color: var(--color-bg-card);
+}
+
+.auth-submit {
+  width: 100%;
+  margin-top: var(--space-3);
+  height: 48px;
+  font-size: var(--text-base);
+}
+
+.auth-footer-text {
+  text-align: center;
+  margin-top: var(--space-8);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.auth-footer-text a {
+  font-weight: var(--weight-semibold);
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: var(--space-6);
+    border-radius: var(--radius-md);
+  }
+}
